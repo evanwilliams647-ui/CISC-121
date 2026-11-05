@@ -1,0 +1,21 @@
+def solution(A):
+   # Convert the array into a set so we can
+   # quickly check whether a number exists
+   numbers = set(A)
+
+
+   # Start with 1 because we need to find
+   # the smallest missing positive integer
+   missing_number = 1
+
+
+   # Keep checking numbers until we find
+   # one that is not in the set
+   while missing_number in numbers:
+       missing_number += 1
+
+
+   # Return the first positive number
+   # that was not found
+   return missing_number
+
